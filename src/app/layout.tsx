@@ -6,8 +6,27 @@ import { twMerge } from "tailwind-merge";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Saas Landing Page",
-  description: "SaaS Landing Page with React, Next.js, TailwindCSS & Framer Motion",
+  title: "Trium Solutions Limited | Motor Rewinding & Electrical Services in Kenya",
+  description:
+    "Expert electric motor rewinding, industrial pump repairs, air-conditioning maintenance, and electrical installations in Nairobi, Kenya. 10+ years experience. Based in Kitengela, Jua Kali Road. Call +254 768 388 710.",
+  keywords: [
+    "motor rewinding Kenya",
+    "electric motor repair Nairobi",
+    "industrial pump repair Kenya",
+    "AC maintenance Nairobi",
+    "electrical services Kenya",
+    "Trium Solutions Limited",
+    "Kitengela motor rewinding",
+    "alternator rewinding Kenya",
+    "armature rewinding Nairobi",
+    "motor rewinding Jua Kali",
+  ],
+  openGraph: {
+    title: "Trium Solutions Limited | Motor Rewinding & Electrical Services",
+    description:
+      "Kenya's trusted motor rewinding experts. Serving industrial clients since 2007. Based in Kitengela, Nairobi.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

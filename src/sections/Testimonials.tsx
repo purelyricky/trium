@@ -9,64 +9,64 @@ import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
 import Image from "next/image";
-import React, { use } from "react";
+import React from "react";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+    text: "Trium Solutions rewound our factory motors to factory specs. Machine downtime dropped significantly and their team was incredibly professional throughout.",
     imageSrc: avatar1.src,
-    name: "Jamie Rivera",
-    username: "@jamietechguru00",
+    name: "James Mutua",
+    username: "Plant Manager, Nairobi Manufacturing Co.",
   },
   {
-    text: "Our team's productivity has skyrocketed since we started using this tool. ",
+    text: "We've relied on Trium for our refrigeration motor rewinding needs for years. Always reliable, fast, and perfectly up to specification every time.",
     imageSrc: avatar2.src,
-    name: "Josh Smith",
-    username: "@jjsmith",
+    name: "Grace Wanjiku",
+    username: "Facilities Director, Nairobi Supermarket Chain",
   },
   {
-    text: "This app has completely transformed how I manage my projects and deadlines.",
+    text: "Their electrical installation team was exceptional — cables, control panels, and CoCs all handled smoothly and delivered on schedule.",
     imageSrc: avatar3.src,
-    name: "Morgan Lee",
-    username: "@morganleewhiz",
+    name: "David Omondi",
+    username: "Project Engineer, Mombasa Industrial Park",
   },
   {
-    text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+    text: "Quick pump repair turnaround meant our production line was barely interrupted. Trium Solutions truly understands industrial urgency.",
     imageSrc: avatar4.src,
-    name: "Casey Jordan",
-    username: "@caseyj",
+    name: "Fatuma Hassan",
+    username: "Operations Manager, Athi River Processing Plant",
   },
   {
-    text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+    text: "The AC maintenance Trium provides for our shopping center is thorough and proactive. We haven't had a major breakdown since we brought them on board.",
     imageSrc: avatar5.src,
-    name: "Taylor Kim",
-    username: "@taylorkimm",
+    name: "Peter Kariuki",
+    username: "Facilities Manager, Garden City Mall",
   },
   {
-    text: "The customizability and integration capabilities of this app are top-notch.",
+    text: "From alternators to armatures, Trium's rewinding work is consistently excellent. Their one-year warranty gives us real peace of mind.",
     imageSrc: avatar6.src,
-    name: "Riley Smith",
-    username: "@rileysmith1",
+    name: "Susan Achieng",
+    username: "Maintenance Engineer, Nakuru Mining Group",
   },
   {
-    text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+    text: "We rely on Trium for all motor rewinding across our Kenyan branches. The quality and reliability have been outstanding across every engagement.",
     imageSrc: avatar7.src,
-    name: "Jordan Patels",
-    username: "@jpatelsdesign",
+    name: "Michael Njoroge",
+    username: "Technical Director, Petrochemical Group Kenya",
   },
   {
-    text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+    text: "Hospital equipment demands precision and certified work. Trium Solutions delivers exactly that — reliable, compliant electrical services every time.",
     imageSrc: avatar8.src,
-    name: "Sam Dawson",
-    username: "@dawsontechtips",
+    name: "Dr. Agnes Kamau",
+    username: "Head of Engineering, Nairobi Hospital Group",
   },
   {
-    text: "Its user-friendly interface and robust features support our diverse needs.",
+    text: "Their managing director's hands-on expertise is evident in every project. Trium is our go-to partner for all motor and electrical service needs.",
     imageSrc: avatar9.src,
-    name: "Casey Harper",
-    username: "@casey09",
+    name: "Collins Odhiambo",
+    username: "CEO, East Africa Refrigeration Services",
   },
 ];
 
@@ -97,7 +97,7 @@ const TestimonialsColumn = (props: {
           ...new Array(2).fill(0).map((_, index) => (
             <React.Fragment key={index}>
               {props.testimonials.map(({ text, imageSrc, name, username }) => (
-                <div className="card" key={username}>
+                <div className="card" key={name}>
                   <div>{text}</div>
                   <div className="flex items-center gap-2 mt-5">
                     <Image
@@ -109,7 +109,7 @@ const TestimonialsColumn = (props: {
                     />
                     <div className="flex flex-col">
                       <div className="font-medium tracking-tight leading-5">{name}</div>
-                      <div className="leading-5 tracking-tight">{username}</div>
+                      <div className="leading-5 tracking-tight text-black/50 text-sm">{username}</div>
                     </div>
                   </div>
                 </div>
@@ -124,17 +124,16 @@ const TestimonialsColumn = (props: {
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white">
+    <section id="testimonials" className="bg-white py-24">
       <div className="container">
         <div className="section-heading">
           <div className="flex justify-center">
-            <div className="tag">Testimonials</div>
+            <div className="tag">Client Testimonials</div>
           </div>
-
-          <h2 className="section-title mt-5">What our users say</h2>
+          <h2 className="section-title mt-5">Trusted Across Kenya</h2>
           <p className="section-des mt-5">
-            From intuitive design to powerful features, out app has become an essential tool for users around
-            the world.
+            From hospitals to mining companies, our clients span every major industry. Here&apos;s what they say
+            about working with Trium Solutions Limited.
           </p>
         </div>
 
