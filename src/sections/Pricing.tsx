@@ -1,15 +1,15 @@
 "use client";
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
-import { motion } from "framer-motion";
 
 const services = [
   {
+    icon: "⚙️",
     title: "Motor Rewinding",
-    description: "Factory-specification rewinding for all electric motors and components — done right the first time.",
+    description:
+      "Factory-specification rewinding for all electric motors and components — done right the first time.",
     buttonText: "Request Service",
     featured: false,
-    inverse: false,
     features: [
       "Electric motors (all types & sizes)",
       "Alternators & armatures",
@@ -20,11 +20,12 @@ const services = [
     ],
   },
   {
+    icon: "🔧",
     title: "Pump Repairs & AC",
-    description: "Expert repair and maintenance for industrial pumps and air-conditioning systems.",
+    description:
+      "Expert repair and maintenance for industrial pumps and air-conditioning systems.",
     buttonText: "Get a Quote",
     featured: true,
-    inverse: true,
     features: [
       "Centrifugal pump repairs",
       "Shaft seals & bearing replacements",
@@ -35,11 +36,12 @@ const services = [
     ],
   },
   {
+    icon: "⚡",
     title: "Electrical Services",
-    description: "Full-spectrum industrial electrical installations, compliance, and repair services.",
+    description:
+      "Full-spectrum industrial electrical installations, compliance, and repair services.",
     buttonText: "Contact Us",
     featured: false,
-    inverse: false,
     features: [
       "Cable & cable tray installation",
       "Distribution boards & control panels",
@@ -66,52 +68,77 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
-          {services.map(({ title, description, buttonText, featured, features, inverse }) => (
+        <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-stretch lg:justify-center">
+          {services.map(({ icon, title, description, buttonText, featured, features }) => (
             <div
               key={title}
               className={twMerge(
-                "p-10 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full",
-                inverse === true && "border-black bg-black text-white"
+                "p-8 rounded-3xl border border-[#F1F1F1] shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full flex flex-col",
+                featured &&
+                  "border-transparent bg-gradient-to-br from-[#001E80] to-[#183EC2] text-white shadow-[0_7px_28px_rgba(24,62,194,0.35)]"
               )}
             >
-              <div className="flex justify-between">
-                <h3 className={twMerge("text-lg font-bold text-black/50", inverse && "text-white/60")}>
+              {/* Icon */}
+              <div
+                className={twMerge(
+                  "w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5",
+                  featured ? "bg-white/15" : "bg-[#EAEEFE]"
+                )}
+              >
+                {icon}
+              </div>
+
+              {/* Title + badge */}
+              <div className="flex items-center justify-between gap-2">
+                <h3 className={twMerge("text-xl font-bold tracking-tight", featured ? "text-white" : "text-black")}>
                   {title}
                 </h3>
                 {featured && (
-                  <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                    <motion.span
-                      animate={{
-                        backgroundPositionX: "-100%",
-                      }}
-                      transition={{
-                        duration: 1,
-                        repeat: Infinity,
-                        ease: "linear",
-                        repeatType: "loop",
-                      }}
-                      className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
-                    >
-                      Most Popular
-                    </motion.span>
-                  </div>
+                  <span className="text-xs font-semibold bg-white/20 text-white px-3 py-1 rounded-full whitespace-nowrap">
+                    Core Service
+                  </span>
                 )}
               </div>
-              <p className={twMerge("text-sm mt-4 leading-relaxed", inverse ? "text-white/70" : "text-black/50")}>
+
+              {/* Description */}
+              <p
+                className={twMerge(
+                  "text-sm mt-3 leading-relaxed",
+                  featured ? "text-white/80" : "text-black/50"
+                )}
+              >
                 {description}
               </p>
+
+              {/* CTA */}
               <a
                 href="#contact"
-                className={twMerge("btn btn-primary w-full mt-[30px] text-center", inverse && "bg-white text-black")}
+                className={twMerge(
+                  "btn btn-primary w-full mt-6 text-center",
+                  featured && "bg-white text-[#001E80] hover:bg-white/90"
+                )}
               >
                 {buttonText}
               </a>
-              <ul className="flex flex-col gap-5 mt-8">
+
+              {/* Divider */}
+              <div
+                className={twMerge("border-t mt-6 mb-5", featured ? "border-white/20" : "border-[#F1F1F1]")}
+              />
+
+              {/* Feature list */}
+              <ul className="flex flex-col gap-3 flex-1">
                 {features.map((feature) => (
-                  <li key={feature} className="text-sm flex items-center gap-4">
-                    <CheckIcon className="h-6 w-6" />
-                    <span>{feature}</span>
+                  <li key={feature} className="text-sm flex items-start gap-3">
+                    <span
+                      className={twMerge(
+                        "mt-0.5 flex-shrink-0",
+                        featured ? "text-white/70" : "text-[#001E80]"
+                      )}
+                    >
+                      <CheckIcon className="h-5 w-5" />
+                    </span>
+                    <span className={featured ? "text-white/80" : "text-black/70"}>{feature}</span>
                   </li>
                 ))}
               </ul>

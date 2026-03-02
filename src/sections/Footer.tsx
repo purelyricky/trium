@@ -47,6 +47,17 @@ export const Footer = () => {
           <SocialYoutube />
         </div>
         <p className="mt-6">&copy; 2024 Trium Solutions Limited. All rights reserved.</p>
+        <p className="mt-2 text-white/30 text-xs">
+          Made with ❤️ by{" "}
+          <a
+            href="https://github.com/purelyricky"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors underline underline-offset-2"
+          >
+            Ricky
+          </a>
+        </p>
       </div>
     </footer>
   );
