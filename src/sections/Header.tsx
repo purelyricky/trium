@@ -43,6 +43,7 @@ export const Header = () => {
               <a href="#about" className="hover:text-black transition-colors">About</a>
               <a href="#services" className="hover:text-black transition-colors">Services</a>
               <a href="#testimonials" className="hover:text-black transition-colors">Clients</a>
+              <a href="/gallery" className="hover:text-black transition-colors">Gallery</a>
               <a href="#contact" className="hover:text-black transition-colors">Contact</a>
               <a
                 href="#contact"
@@ -62,6 +63,7 @@ export const Header = () => {
             <a href="#about" onClick={close} className="hover:text-black transition-colors">About</a>
             <a href="#services" onClick={close} className="hover:text-black transition-colors">Services</a>
             <a href="#testimonials" onClick={close} className="hover:text-black transition-colors">Clients</a>
+            <a href="/gallery" onClick={close} className="hover:text-black transition-colors">Gallery</a>
             <a href="#contact" onClick={close} className="hover:text-black transition-colors">Contact</a>
             <a href="#contact" onClick={close} className="btn btn-primary w-full justify-center mt-1">
               Get a Quote
