@@ -18,7 +18,7 @@ export const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService Needed: ${service}\n\nMessage:\n${message}`
     );
-    window.location.href = `mailto:thardeusokoth1993@outlook.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:triumsolutionsltd@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -136,7 +136,7 @@ export const Contact = () => {
           <div className="flex flex-col gap-5 justify-center">
             <div className="bg-white rounded-3xl p-6 shadow-[0_7px_14px_#EAEAEA]">
               <h4 className="font-bold tracking-tight text-black">Our Location</h4>
-              <p className="text-[#010D3E]/60 text-sm mt-1">Kitengela, Jua Kali Road</p>
+              <p className="text-[#010D3E]/60 text-sm mt-1">Mlolongo Police Line</p>
               <p className="text-[#010D3E]/60 text-sm">P.O. Box 22070-0200, Nairobi, Kenya</p>
             </div>
             <div className="bg-white rounded-3xl p-6 shadow-[0_7px_14px_#EAEAEA]">
@@ -157,10 +157,10 @@ export const Contact = () => {
             <div className="bg-white rounded-3xl p-6 shadow-[0_7px_14px_#EAEAEA]">
               <h4 className="font-bold tracking-tight text-black">Email Us</h4>
               <a
-                href="mailto:thardeusokoth1993@outlook.com"
+                href="mailto:triumsolutionsltd@gmail.com"
                 className="text-[#001E80] text-sm mt-1 block hover:underline font-medium break-all"
               >
-                thardeusokoth1993@outlook.com
+                triumsolutionsltd@gmail.com
               </a>
             </div>
             <div className="bg-white rounded-3xl p-6 shadow-[0_7px_14px_#EAEAEA]">

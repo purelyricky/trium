@@ -31,7 +31,7 @@ export const ProductShowcase = () => {
             Decades of Rewinding Excellence
           </h2>
           <p className="section-des mt-5">
-            Based in Kitengela, Jua Kali Road, Trium Solutions Limited has over 10 years of hands-on experience
+            Based in Mlolongo Police Line, Trium Solutions Limited has over 10 years of hands-on experience
             in electric motor rewinding and industrial services. Our managing director brings more than 13 years
             of personal expertise — ensuring every job meets the highest factory specifications.
           </p>

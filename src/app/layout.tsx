@@ -8,7 +8,7 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Trium Solutions Limited | Motor Rewinding & Electrical Services in Kenya",
   description:
-    "Expert electric motor rewinding, industrial pump repairs, air-conditioning maintenance, and electrical installations in Nairobi, Kenya. 10+ years experience. Based in Kitengela, Jua Kali Road. Call +254 768 388 710.",
+    "Expert electric motor rewinding, industrial pump repairs, air-conditioning maintenance, and electrical installations in Nairobi, Kenya. 10+ years experience. Based in Mlolongo Police Line. Call +254 768 388 710.",
   keywords: [
     "motor rewinding Kenya",
     "electric motor repair Nairobi",
@@ -16,15 +16,15 @@ export const metadata: Metadata = {
     "AC maintenance Nairobi",
     "electrical services Kenya",
     "Trium Solutions Limited",
-    "Kitengela motor rewinding",
+    "Mlolongo motor rewinding",
     "alternator rewinding Kenya",
     "armature rewinding Nairobi",
-    "motor rewinding Jua Kali",
+    "motor rewinding Mlolongo",
   ],
   openGraph: {
     title: "Trium Solutions Limited | Motor Rewinding & Electrical Services",
     description:
-      "Kenya's trusted motor rewinding experts. Serving industrial clients since 2007. Based in Kitengela, Nairobi.",
+      "Kenya's trusted motor rewinding experts. Serving industrial clients since 2007. Based in Mlolongo Police Line, Nairobi.",
     type: "website",
   },
 };

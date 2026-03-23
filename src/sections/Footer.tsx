@@ -24,7 +24,7 @@ export const Footer = () => {
         </nav>
 
         <div className="mt-6 flex flex-col md:flex-row justify-center gap-2 md:gap-4 text-xs text-white/50">
-          <span>Kitengela, Jua Kali Road, Nairobi &bull; P.O. Box 22070-0200</span>
+          <span>Mlolongo Police Line, Nairobi &bull; P.O. Box 22070-0200</span>
           <span className="hidden md:inline">|</span>
           <a href="tel:+254768388710" className="hover:text-white transition-colors">
             +254 768 388 710
@@ -34,8 +34,8 @@ export const Footer = () => {
             +254 735 800 240
           </a>
           <span className="hidden md:inline">|</span>
-          <a href="mailto:thardeusokoth1993@outlook.com" className="hover:text-white transition-colors">
-            thardeusokoth1993@outlook.com
+          <a href="mailto:triumsolutionsltd@gmail.com" className="hover:text-white transition-colors">
+            triumsolutionsltd@gmail.com
           </a>
         </div>
 

@@ -23,7 +23,7 @@ interface ImageModalProps {
 
 export function Gallery({ data, onImageClick }: GalleryProps) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-[220px]">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 auto-rows-[150px] md:auto-rows-[220px]">
       {data.map((img) => (
         <div
           key={img.id}
